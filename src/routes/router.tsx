@@ -4,7 +4,6 @@ import { authRoutes, publicRoutes } from "./router.link";
 import Feature from "./feature";
 import AuthFeature from "./authFeature";
 
-
 // Premium Centered Loader Component
 const PageLoader: React.FC = () => {
   return (
