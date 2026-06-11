@@ -41,24 +41,15 @@ workflows:
       - name: Sync Capacitor iOS
         script: |
           npx cap sync ios
-      - name: Build iOS App (Unsigned)
+      - name: Set up code signing
         script: |
-          xcodebuild -project "$XCODE_PROJECT" \
-            -scheme "$XCODE_SCHEME" \
-            -sdk iphoneos \
-            -configuration Release \
-            -derivedDataPath build \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGNING_ALLOWED=NO \
-            clean build
-      - name: Package Unsigned IPA
+          xcode-project use-profiles
+      - name: Build iOS IPA
         script: |
-          mkdir -p build/Payload
-          cp -r build/Build/Products/Release-iphoneos/*.app build/Payload/
-          cd build && zip -r unsigned_app.ipa Payload
+          xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
     artifacts:
-      - build/*.ipa
+      - ios/App/build/ios/ipa/*.ipa
+
 
 
 

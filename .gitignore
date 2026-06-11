@@ -1,1 +1,6 @@
 node_modules
+ios.key
+ios.csr
+*.cer
+*.p12
+*.mobileprovision
