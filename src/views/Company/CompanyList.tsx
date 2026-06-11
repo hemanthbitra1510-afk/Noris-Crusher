@@ -337,17 +337,26 @@ const CompanyList = () => {
                     <div className="d-flex gap-2 mt-4 pt-3 border-top">
 
                       <button
-                        className="btn btn-outline-primary w-50"
+                        className="btn btn-outline-primary flex-fill"
                         onClick={() => handleEdit(company)}
                       >
                         <i className="ti ti-edit me-1" /> Edit
                       </button>
 
                       <button
-                        className="btn btn-outline-success w-50"
+                        className="btn btn-outline-success flex-fill"
                         onClick={() => handleSelect(company)}
                       >
                         <i className="ti ti-eye me-1" /> Preview
+                      </button>
+
+                      <button
+                        className="btn btn-outline-danger flex-fill"
+                        onClick={() => {
+                          alert("Delete requested. (Action is a mock placeholder without API integration)");
+                        }}
+                      >
+                        <i className="ti ti-trash me-1" /> Delete
                       </button>
 
                     </div>
