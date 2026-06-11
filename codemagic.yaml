@@ -27,12 +27,12 @@ workflows:
     name: iOS Workflow
     max_build_duration: 60
     instance_type: mac_mini_m2
-    # integrations:
-    #   app_store_connect: codemagic_integration_name
+    integrations:
+      app_store_connect: "Your_App_Store_Connect_Integration_Name" # Replace with the name of your integration from Codemagic (e.g. "my-apple-developer-account")
     environment:
-      # ios_signing:
-      #   distribution_type: app_store
-      #   bundle_identifier: com.noriscrusher.app
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.noriscrusher.app
       vars:
         XCODE_PROJECT: "ios/App/App.xcodeproj"
         XCODE_SCHEME: "App"
@@ -46,13 +46,13 @@ workflows:
       - name: Sync Capacitor iOS
         script: |
           npx cap sync ios
-      # Note: Set up code signing on Codemagic UI first, then uncomment the section below
-      # - name: Set up code signing
-      #   script: |
-      #     xcode-project use-profiles
+      - name: Set up code signing
+        script: |
+          xcode-project use-profiles
       - name: Build iOS IPA
         script: |
           xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
     artifacts:
       - ios/App/build/ios/ipa/*.ipa
+
 
