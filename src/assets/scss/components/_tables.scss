@@ -1,0 +1,100 @@
+//
+// tables.scss
+//
+.table{
+    background-color: $table-bg;
+    margin-bottom: 0 !important;
+    border: 1px solid var(--#{$prefix}border-color);
+    thead{
+        tr{
+            th {
+                font-weight: $font-weight-semibold;
+                padding: 8px 10px 8px 10px;
+                color: var(--#{$prefix}heading-color);
+                font-size: 13px;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                padding: 20px 10px 20px 10px !important;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+th {
+    font-weight: $font-weight-semibold;
+    color: var(--#{$prefix}gray-900);
+    
+}
+
+.thead-sm {
+    > * > * {
+        padding: $table-cell-padding-y-sm $table-cell-padding-x-sm !important;
+    }
+}
+
+.table-custom {
+    tfoot > tr > th:first-child, 
+    thead > tr > th:first-child, 
+    tr th:first-child, 
+    tr td:first-child {
+        padding-left: calc($table-cell-padding-y * 1.5) !important;
+    }
+
+    tfoot > tr > th:last-child, 
+    thead > tr > th:last-child, 
+    tr th:last-child, 
+    tr td:last-child {
+        padding-right: calc($table-cell-padding-y * 1.5) !important;
+    }
+}
+
+// Tables fluid
+.table-nowrap {
+
+    th,
+    td {
+        white-space: nowrap;
+    }
+}
+.action-item > a {
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--#{$prefix}border-color);
+    border-radius: 7px;
+    color: var(--gray-500);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 1px 0px #0000000D;
+
+}
+
+.table-header{
+    padding: 15px 20px;
+}
+
+// dark mode
+[data-bs-theme="dark"] {
+    .table-light {
+        --#{$prefix}table-color: var(--#{$prefix}body-color);
+        --#{$prefix}table-bg: var(--#{$prefix}light);
+        --#{$prefix}table-border-color: var(--#{$prefix}border-color);
+    }
+}
+
+.set-star {
+    i {
+        color: var(--#{$prefix}border-color);        
+    }
+    &.filled {
+        i{
+            color: var(--#{$prefix}warning);
+        }
+    }
+}

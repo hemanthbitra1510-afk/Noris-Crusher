@@ -1,0 +1,21 @@
+//
+// _layout.scss 
+//
+
+.page-wrapper {
+    @include transition(all 0.5s ease);
+    margin: 0 0 0 var(--#{$prefix}sidenav-width);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    min-height: calc(100vh - (var(--cf-topbar-height) + 1px));
+    @include transition(all 0.2s ease);
+    @include media-breakpoint-down(lg) {
+        margin: 0;
+    }
+    .content {
+        padding:  calc($spacer * 1);
+        min-height: calc(100vh - 96px);
+    }
+}

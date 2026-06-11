@@ -1,0 +1,12 @@
+//
+// chartjs.scss
+//
+
+.chartjs-chart {
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+.chart-container {
+    border-color: var(--#{$prefix}border-color);
+}

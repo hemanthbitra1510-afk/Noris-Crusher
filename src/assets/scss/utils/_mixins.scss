@@ -1,0 +1,58 @@
+//
+// _mixins.scss 
+//
+
+@mixin transform($property) {
+  transform: $property;
+  -webkit-transform: $property;
+  -ms-transform: $property;
+}
+
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color;
+      opacity: 1;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $color;
+      opacity: 1;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $color;
+      opacity: 1;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: $color;
+      opacity: 1;
+  }
+}
+
+@mixin rounded($unit) {
+  border-radius: $unit;
+}
+
+@mixin transform-origin($property) {
+  transform-origin: $property;
+  -webkit-transform-origin: $property;
+  -ms-transform-origin: $property;
+}
+
+@mixin box-shadow($inset:inset,$horizontaloffset:10px,$verticaloffset:10px,$blur:10px,$spread:10px,$color: #000000) {
+  -webkit-box-shadow: $inset $horizontaloffset $verticaloffset $blur $spread $color;
+  -moz-box-shadow: $inset $horizontaloffset $verticaloffset $blur $spread $color;
+  box-shadow: $inset $horizontaloffset $verticaloffset $blur $spread $color;
+}
+
+%animation-effect {   
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}

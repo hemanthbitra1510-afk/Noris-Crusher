@@ -1,0 +1,90 @@
+//
+// progress.scss
+//
+
+// Utilities
+
+@each $color,
+$value in $theme-colors {
+    .progress-soft:has(.bg-#{$color}) {
+        background-color: rgba(var(--#{$prefix}#{$color}-rgb), 0.1);
+    }
+}
+
+// Custom height
+
+// Progress height small
+.progress-xs {
+    height: 3px;
+}
+.progress-sm {
+    height: 5px;
+}
+
+// Progress height medium
+.progress-md {
+    height: 8px;
+}
+
+// Progress height large
+.progress-lg {
+    height: 12px;
+}
+
+// Progress height extra large
+.progress-xl {
+    height: 15px;
+}
+
+.progress-with-border {
+    .progress-bar+.progress-bar {
+        border-left: 3px solid #{$card-bg};
+    }
+}
+
+
+
+// 
+
+.progress-value {
+    display: block;
+    position: absolute;
+    top: -28px;
+    right: 0px;
+}
+
+.pipeline-progress {
+    .progress {
+        background: transparent;
+        width: 70px;
+        height: 5px;
+        .progress-bar {
+            width: 70px;
+            height: 5px;
+            border-radius: 5px;
+            &.progress-bar-success {
+                background: var(--#{$prefix}success);
+            }
+            &.progress-bar-violet {
+                 background: var(--#{$prefix}purple);
+            }
+            &.progress-bar-info {
+                background: var(--#{$prefix}info);
+            }
+            &.progress-bar-warning {
+                background: var(--#{$prefix}warning);
+            }
+            &.progress-bar-green {
+                background: var(--#{$prefix}teal);
+            }
+            &.progress-bar-danger {
+                background: var(--#{$prefix}danger);
+            }
+        }
+    }
+    span {
+        margin-left: 10px;
+        color: var(--#{$prefix}gray-900);
+        font-weight: $font-weight-medium;
+    }
+}

@@ -1,0 +1,26 @@
+// 
+// _footer.scss
+//
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px calc($spacer * 1);
+    color: var(--#{$prefix}gray-500);
+    transition: $transition-base;
+    border-top: 1px solid $card-border-color;
+    background-color: var(--#{$prefix}white);
+
+    .footer-links {
+        a {
+            color: var(--#{$prefix}gray-500);
+            transition: all .4s;
+
+            &:hover {
+                color: var(--#{$prefix}primary);
+            }
+        }
+    }
+}

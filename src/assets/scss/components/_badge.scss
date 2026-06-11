@@ -1,0 +1,62 @@
+//
+// _badges.scss
+//
+
+// Soft Badge
+
+@each $state in map-keys($theme-colors) {
+    .badge-soft-#{$state} {
+        --#{$prefix}badge-color: var(--#{$prefix}#{$state});
+        background-color: var(--#{$prefix}#{$state}-bg-subtle);
+        border-bottom:  1px solid var(--#{$prefix}#{$state});
+
+        &[href] {
+            color: var(--#{$prefix}#{$state});
+            text-decoration: none;            
+            background-color: var(--#{$prefix}#{$state}-bg-subtle);
+
+            &:is(:hover, :focus) {
+                color: var(--#{$prefix}#{$state});
+                text-decoration: none;
+                background-color: var(--#{$prefix}#{$state}-bg-subtle);
+            }
+        }
+    }
+}
+
+// Outline badge
+@each $state in map-keys($theme-colors) {
+    .badge-outline-#{$state} {
+        --#{$prefix}badge-color: var(--#{$prefix}#{$state});
+        border: 1px solid var(--#{$prefix}#{$state});
+        background-color: transparent;
+
+        &[href] {
+            color: var(--#{$prefix}#{$state});
+            text-decoration: none;
+            background-color: var(--#{$prefix}#{$state}-bg-subtle);
+
+            &:is(:hover, :focus) {
+                color: var(--#{$prefix}#{$state});
+                text-decoration: none;
+                background-color: var(--#{$prefix}#{$state}-bg-subtle);
+            }
+        }
+    }
+}
+
+
+
+.badge {
+    vertical-align: middle;
+    font-size: $font-size-sm;
+    padding: 5px 6px;
+}
+.badge.badge-md{
+    font-size: 13px;
+    padding: 0.375rem 0.5rem;
+}
+.badge.badge-lg{
+    font-size: $font-size-base;
+    padding: 0.5rem 0.75rem;
+}

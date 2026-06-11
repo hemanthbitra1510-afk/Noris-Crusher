@@ -1,0 +1,18 @@
+//
+// _intelinput.scss 
+//
+
+.iti__country-list {
+    border-color: var(--#{$prefix}border-color);
+    box-shadow: var(--#{$prefix}box-shadow-lg);
+    .iti__country {
+        display: flex;
+        align-items: center;
+    }
+    .iti__divider {
+        border-color: var(--#{$prefix}border-color);
+    }
+    .iti__dial-code {
+        color: var(--#{$prefix}body-color);
+    }
+}

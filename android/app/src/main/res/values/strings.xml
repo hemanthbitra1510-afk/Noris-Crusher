@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Noris Crusher</string>
+    <string name="title_activity_main">Noris Crusher</string>
+    <string name="package_name">com.noriscrusher.app</string>
+    <string name="custom_url_scheme">com.noriscrusher.app</string>
+</resources>

@@ -1,0 +1,12 @@
+
+.offcanvas-header{
+    border-bottom: 1px solid var(--#{$prefix}border-color);
+    padding: 16px 20px;
+    .btn-close{
+        background-color: $danger-bg-subtle;
+         font-size: 12px;
+         padding: 8px;
+         border-radius: $border-radius-pill;
+         margin-right: 0;
+    }
+}

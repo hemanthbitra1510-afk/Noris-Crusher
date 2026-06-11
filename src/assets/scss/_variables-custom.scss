@@ -1,0 +1,36 @@
+//
+// variables-custom.scss
+//
+
+// Left Sidebar
+$sidenav-width:                     var(--#{$prefix}sidenav-width);
+$sidenav-width-md:                  var(--#{$prefix}sidenav-width-md);
+$sidenav-width-sm:                  var(--#{$prefix}sidenav-width-sm);
+
+// Menu
+$menu-bg:                           var(--#{$prefix}menu-bg);
+$menu-title-color:                   var(--#{$prefix}menu-title-color);
+$menu-item-heading:                   var(--#{$prefix}menu-item-heading);
+$menu-item-color:                   var(--#{$prefix}menu-item-color);
+$menu-item-hover-color:             var(--#{$prefix}menu-item-hover-color);
+$menu-item-hover-bg:                var(--#{$prefix}menu-item-hover-bg);
+$menu-item-border:                   var(--#{$prefix}menu-item-border);
+$menu-item-active-color:            var(--#{$prefix}menu-item-active-color);
+$menu-item-active-bg:               var(--#{$prefix}menu-item-active-bg);
+$menu-active-color:                 var(--#{$prefix}menu-active-color);
+$submenu-active-color:              var(--#{$prefix}submenu-active-color);
+$menu-active-bg:                    var(--#{$prefix}menu-active-bg);
+$menu-icon-bg:                    var(--#{$prefix}menu-icon-bg);
+
+// Topbar
+$topbar-height:                     var(--#{$prefix}topbar-height);
+$topbar-bg:                         var(--#{$prefix}topbar-bg);
+$topbar-item-bg:                     var(--#{$prefix}topbar-item-bg);
+$topbar-item-border:                 var(--#{$prefix}topbar-item-border);
+$topbar-item-color:                 var(--#{$prefix}topbar-item-color);
+$topbar-item-hover-color:           var(--#{$prefix}topbar-item-hover-color);
+$topbar-item-hover-bg:              var(--#{$prefix}topbar-item-hover-bg);
+$topbar-item-shadow:                var(--#{$prefix}topbar-item-shadow);
+
+$font-family-primary:				"Golos Text", sans-serif;
+$font-awesome:						"Fontawesome";
